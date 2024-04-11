@@ -1,0 +1,2 @@
+# ignore text.txt file in the root directory
+/text.txt
