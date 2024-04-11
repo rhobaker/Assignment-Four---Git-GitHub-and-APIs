@@ -59,57 +59,57 @@
 
     <h2>Git commands</h2>
 
-    <h4>git init</h4>
+    <h3>git init</h3>
     <p>Initialises a new repository</p>
     <p>Sets up the intrastructure in the folder to become a repository, including a .git folder.</p>
     <p>It also tells Git that it needs to keep track of any files in the repository.</p>
     <p>It only needs to be run once, at the start of each project.</p>
 
-    <h4>git status</h4>
+    <h3>git status</h3>
     <p>The status of the Git repository.</p>
     <p>E.g.the branch you are on, any commits, if there are untracked files etc.</p>
 
-    <h4>git add <i>filename</i></h4>
-    <h4>git add -- all</h4>
+    <h3>git add <i>filename</i></h3>
+    <h3>git add -- all</h3>
     <p>Adds changes from the working directory to the staging area.</p>
     <p>Tells Git which changes we want to commit.</p>
 
-    <h4>git diff <i>filename</i></h4>
+    <h3>git diff <i>filename</i></h3>
     <p>Shows any differences between the file in the working directory and the staging area.</p>
 
-    <h4>git commit -m "Message added to commit"</h4>
+    <h3>git commit -m "Message added to commit"</h3>
     <p>Commits the changes in the staging area to the repository.</p>
     <p>Permanently stores a snapshot of the files.</p>
     <p>The message helps to remind you and others in your team what has changed in the commit.</p>
 
-    <h4>git log</h4>
-    <h4>git log --oneline</h4>
+    <h3>git log</h3>
+    <h3>git log --oneline</h3>
     <p>Prints a list of the commits in the repository</p>
     <p>It shows when it was commited, who did it and on which branch.</p>
     <p>It also has a unique code to identify it.</p>
     <p>--oneline, shows a more condensed version of the log.</p>
 
-    <h4>git <i>command</i> -help</h4>
+    <h3>git <i>command</i> -help</h3>
     <p>Gives help for different commands</p>
 
-    <h4>git branch <i>branch name</i></h4>
+    <h3>git branch <i>branch name</i></h3>
     <p>This will create a new branch.</p>
     <p>It should have a name that reflects the changes that will be made in it.</p>
 
-    <h4>git checkout -b <i>branch name</i></h4>
+    <h3>git checkout -b <i>branch name</i></h3>
     <p>This will create a new branch and switch the terminal to it.</p>
 
-    <h4>git switch <i>branch name</i></h4>
+    <h3>git switch <i>branch name</i></h3>
     <p>Switch to an existing branch.</p>
 
-    <h4>git branch -d <i>branch name</i></h4>
+    <h3>git branch -d <i>branch name</i></h3>
     <p>Deletes a branch after the files have been merged</p>
 
-    <h4>git branch</h4>
+    <h3>git branch</h3>
     <p>Lists all the branches in a repository.</p>
     <p>There will be a * before the name of the current branch.</p>
 
-    <h4>git merge <i>branch to merge in</i></h4>
+    <h3>git merge <i>branch to merge in</i></h3>
     <p>To merge one branch to another one.</p>
     <p>Checkout to the branch you want to merge into first, then merge in the other branch.</p>
     <p>Git will add changes from <i>branch to merge in</i> into the current branch./</p>
@@ -118,40 +118,40 @@
     <p>They will need to be resolved before merging again.</p>
 
 
-    <h4>git revert <i>refnum</i></h4>
+    <h3>git revert <i>refnum</i></h3>
     <p>Revert back to a previous commit.</p>
     <p>Will keep all previous commits etc. intact.</p>
 
-    <h4>git reset commit_<i>6digituniqueref</i></h4>
+    <h3>git reset commit_<i>6digituniqueref</i></h3>
     <p>Move the whole repository back to a previous commit</p>
     <p>Will delete all other commits etc.</p>
 
-    <h4>git checkout HEAD <i>filename</i></h4>
+    <h3>git checkout HEAD <i>filename</i></h3>
     <p>Rolls back all changes that have benn made to the filename since the last commit.</p>
 
 
-    <h4>git --amend -m "Comment"</h4>
+    <h3>git --amend -m "Comment"</h3>
     <p>Modifies the most recent commit.</p>
 
-    <h4>git remote -v</h4>
+    <h3>git remote -v</h3>
     <p>Returns the name of the remote repository the current local repository is tied to.</p>
 
-    <h4>git push origin <i>branchname</i></h4>
+    <h3>git push origin <i>branchname</i></h3>
     <p>Pushes the commited changes in <i>branchname</i> to the remote respository.</p>
     <p>It will then be visible in GitHub.</p>
 
-    <h4>git clone <i>URL</i> <i>foldername</i></h4>
+    <h3>git clone <i>URL</i> <i>foldername</i></h3>
     <p>Creates a local copy of a remote repository.</p>
     <p>The foldername is the folder where the files will be copied to.</p>
 
-    <h4>git fetch</h4>
+    <h3>git fetch</h3>
     <p>Fetch downloads items from the remote repository, but they are NOT merged.</p>
     <p>The changes will be stored in a new branch in the local repository.</p>
     <p>They can be merged with git merge <i>branchname</i></p>
 
     <h2>Other Useful Terminal Commands</h2>
 
-    <h4>ls</h4>
+    <h3>ls</h3>
     <p>Lists all of the files in a directory</p>
     <p>This will be for the branch you are currently checked into.</p>
 
@@ -178,7 +178,7 @@
 
 
     <h3>Using GitHub</h3>
-    <h4>Pushing</h4>
+    <h3>Pushing</h3>
     <p>Once you have set up a repository in GitHub for your project you can copy the URL on the main page.</p>
     <p>In the terminal on your computer, when you are in your local repository:</p>
     <p>git remote add origin <i>URL</i></p>
@@ -187,12 +187,12 @@
     <p>git push --set - upstream origin master</p>
     <p>origin: shorthand name for the remote repository.</p>
     <p>Once the code has been pushed to GitHub it can be edited using the code editor in GitHub.</p>
-    <h4>Pulling</h4>
+    <h3>Pulling</h3>
     <p>This is a combination of two commands: fetch and merge.</p>
     <p>Fetch: Gets the change history of a repository or branch.  Git log will show the changes.</p>
     <p>Merge:  Combines the current branch with the branch pulled in from GitHub.</p>
     <p>To do them at the same time: git pull origin</p>
-    <h4>Creating a branch</h4>
+    <h3>Creating a branch</h3>
     <p>Click on the "Master" branch button.</p>
     <p>You can then type in the name of the new branch to create it on GitHub.</p>
     <p>You can now make changes to files in this branch in GitHub.</p>
@@ -200,11 +200,11 @@
     <p>git branch -a: Shows the branches that you have.</p>
     <p>git checkout <i>branch</i>: Switches to the new branch.  We will see any changes made in GitHub in our local files.</p>
 
-    <h4>Pull Requests</h4>
+    <h3>Pull Requests</h3>
     <p>Pull requests notify people of commited changes that are ready to review.</p>
     <p>It creates a discussion area so other team members can add comments and discuss the updates before it is merged to the main branch.</p>
 
-    <h4>Fork</h4>
+    <h3>Fork</h3>
     <p>You can't add code to someone else's repository, but you can fork their repository and made a copy of it.</p>
     <p>You can also make a copy of it on your local Git, by pasting the original repositories URL:</p>
     <p>git clone <i>URL</i></p>
