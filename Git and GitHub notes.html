@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Git revision notes</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <h1>Git Revision Notes</h1>
+
+    <h2>Version Control System (VCS)</h2>
+    <p>A VCS allows a developer to manage the changes made to different files and keep track of who and when any changes
+        were made.</p>
+    <p>They also allow previous versions of files to be restored if needed.</p>
+    <p>This makes them especially good at helping groups of people to work together on the same project.</p>
+    <p>Git is an example of a VCS that is used by many developers.</p>
+
+
+    <h2>Using Git in the terminal</h2>
+    <p>The terminal is an interface between the user and their computer's operating system.</p>
+    <p>It is operated by entering structured commands and viewing the response that is then printed.</p>
+    <p>The terminal is opened in a specific place in the operating system, such as a folder - this is known as the
+        current working directory.</p>
+
+
+    <h2>What is Git used for?</h2>
+    <p>Git is used to create a repository in your computer to keep track of files and changes that are made to them.</p>
+    <p>It also allows files to be "branched", so that they can be worked on without affecting the main copy.</p>
+    <p>The branch can then be merged back into the main branch when the updates have been made and tested.</p>
+
+
+    <h2>How to use Git</h2>
+    <ol>
+        <li><b>Initialize Git on a folder in your computer.</b><br>
+            This is the folder with the files you want to track in and will make it a <b>local</b>repository.<br>
+            Git creates a hidden folder within this folder.
+        </li>
+        <li><b>Modify a file within the repository</b><br>
+            This can be adding a folder, deleting one or changing the content within it.
+            This is done in the <b>working directory.</b>
+        </li>
+        <li><b>Select the modified files that you want to stage</b>
+            This means that you want to save the state they are currently in, so you can review the changes or to
+            restore later.
+            The files are moved from the <b>working area</b> to the <b>staging area</b>
+        </li>
+        <li><b>Commit the staged files to the repository</b>
+            A permanent record of the files and their contents are saved to the local repository.
+            A history of every commit can be seen with Git.
+        </li>
+        <li><b>If needed select a previous commit to restore a file</b>
+            Note: Git does not store a copy of the file, but a list of the changes
+        </li>
+    </ol>
+
+    <h2>Git commands</h2>
+
+    <h4>git init</h4>
+    <p>Initialises a new repository</p>
+    <p>Sets up the intrastructure in the folder to become a repository, including a .git folder.</p>
+    <p>It also tells Git that it needs to keep track of any files in the repository.</p>
+    <p>It only needs to be run once, at the start of each project.</p>
+
+    <h4>git status</h4>
+    <p>The status of the Git repository.</p>
+    <p>E.g.the branch you are on, any commits, if there are untracked files etc.</p>
+
+    <h4>git add <i>filename</i></h4>
+    <h4>git add -- all</h4>
+    <p>Adds changes from the working directory to the staging area.</p>
+    <p>Tells Git which changes we want to commit.</p>
+
+    <h4>git diff <i>filename</i></h4>
+    <p>Shows any differences between the file in the working directory and the staging area.</p>
+
+    <h4>git commit -m "Message added to commit"</h4>
+    <p>Commits the changes in the staging area to the repository.</p>
+    <p>Permanently stores a snapshot of the files.</p>
+    <p>The message helps to remind you and others in your team what has changed in the commit.</p>
+
+    <h4>git log</h4>
+    <h4>git log --oneline</h4>
+    <p>Prints a list of the commits in the repository</p>
+    <p>It shows when it was commited, who did it and on which branch.</p>
+    <p>It also has a unique code to identify it.</p>
+    <p>--oneline, shows a more condensed version of the log.</p>
+
+    <h4>git <i>command</i> -help</h4>
+    <p>Gives help for different commands</p>
+
+    <h4>git branch <i>branch name</i></h4>
+    <p>This will create a new branch.</p>
+    <p>It should have a name that reflects the changes that will be made in it.</p>
+
+    <h4>git checkout -b <i>branch name</i></h4>
+    <p>This will create a new branch and switch the terminal to it.</p>
+
+    <h4>git switch <i>branch name</i></h4>
+    <p>Switch to an existing branch.</p>
+
+    <h4>git branch -d <i>branch name</i></h4>
+    <p>Deletes a branch after the files have been merged</p>
+
+    <h4>git branch</h4>
+    <p>Lists all the branches in a repository.</p>
+    <p>There will be a * before the name of the current branch.</p>
+
+    <h4>git merge <i>branch to merge in</i></h4>
+    <p>To merge one branch to another one.</p>
+    <p>Checkout to the branch you want to merge into first, then merge in the other branch.</p>
+    <p>Git will add changes from <i>branch to merge in</i> into the current branch./</p>
+    <p>If the branch is not going to be used again, it can be deleted to keep the repository tidy.</p>
+    <p>If Git can't merge the branches because there is a <b>conflict</b> it will give an error message, explaining where the conflicts are.</p>
+    <p>They will need to be resolved before merging again.</p>
+
+
+    <h4>git revert <i>refnum</i></h4>
+    <p>Revert back to a previous commit.</p>
+    <p>Will keep all previous commits etc. intact.</p>
+
+    <h4>git reset commit_<i>6digituniqueref</i></h4>
+    <p>Move the whole repository back to a previous commit</p>
+    <p>Will delete all other commits etc.</p>
+
+    <h4>git checkout HEAD <i>filename</i></h4>
+    <p>Rolls back all changes that have benn made to the filename since the last commit.</p>
+
+
+    <h4>git --amend -m "Comment"</h4>
+    <p>Modifies the most recent commit.</p>
+
+    <h4>git remote -v</h4>
+    <p>Returns the name of the remote repository the current local repository is tied to.</p>
+
+    <h4>git push origin <i>branchname</i></h4>
+    <p>Pushes the commited changes in <i>branchname</i> to the remote respository.</p>
+    <p>It will then be visible in GitHub.</p>
+
+    <h4>git clone <i>URL</i> <i>foldername</i></h4>
+    <p>Creates a local copy of a remote repository.</p>
+    <p>The foldername is the folder where the files will be copied to.</p>
+
+    <h4>git fetch</h4>
+    <p>Fetch downloads items from the remote repository, but they are NOT merged.</p>
+    <p>The changes will be stored in a new branch in the local repository.</p>
+    <p>They can be merged with git merge <i>branchname</i></p>
+
+    <h2>Other Useful Terminal Commands</h2>
+
+    <h4>ls</h4>
+    <p>Lists all of the files in a directory</p>
+    <p>This will be for the branch you are currently checked into.</p>
+
+
+    <h2>Branching</h2>
+    <p>A separate line of development, so you can work on different versions of the same file at the same time.</p>
+    <p>There can be many branches in the same repository.</p>
+    <p>Changes can also be made without affecting the main branch of the project and then <b>merged</b> back in.</p>
+
+    <p>The default branch is called <b>main</b> and it is created automatically, when you make the first commit.</p>
+    <p>When there are multiple branches there is a pointer called <b>HEAD</b>, which is the commit you are currently on.</p>
+    <p>If this is NOT the main branch, then changes are not in sync with the main branch.</p>
+    <p>To reflect these changes in the main branch, they need to be merged back in.</p>
+
+    <p>To push a branch to GitHub, make sure all changes are commited in the local repository.</p>
+    <p>git push origin <i>branchname</i></p>
+    <p>The new branch should then be visible in Gith=Hub.</p>
+    <p>To merge the branch into the main branch, create a pull request to merge them.</p>
+
+
+    <h2>Git and GitHub</h2>
+    <p>GitHub is different to Git, but it does use the Git VCS.</p>
+    <p>It is a <b>remote</b> repository on a network and used to use as a backup or when working with a team.</p>
+
+
+    <h3>Using GitHub</h3>
+    <h4>Pushing</h4>
+    <p>Once you have set up a repository in GitHub for your project you can copy the URL on the main page.</p>
+    <p>In the terminal on your computer, when you are in your local repository:</p>
+    <p>git remote add origin <i>URL</i></p>
+    <p>This tells your computer that you are adding a remote repository as an <b>origin</b> to your local Git repository.</p>
+    <p>To push your main branch from the local repository to GitHub:</p>
+    <p>git push --set - upstream origin master</p>
+    <p>origin: shorthand name for the remote repository.</p>
+    <p>Once the code has been pushed to GitHub it can be edited using the code editor in GitHub.</p>
+    <h4>Pulling</h4>
+    <p>This is a combination of two commands: fetch and merge.</p>
+    <p>Fetch: Gets the change history of a repository or branch.  Git log will show the changes.</p>
+    <p>Merge:  Combines the current branch with the branch pulled in from GitHub.</p>
+    <p>To do them at the same time: git pull origin</p>
+    <h4>Creating a branch</h4>
+    <p>Click on the "Master" branch button.</p>
+    <p>You can then type in the name of the new branch to create it on GitHub.</p>
+    <p>You can now make changes to files in this branch in GitHub.</p>
+    <p>To pull this into your local repository: git pull origin</p>
+    <p>git branch -a: Shows the branches that you have.</p>
+    <p>git checkout <i>branch</i>: Switches to the new branch.  We will see any changes made in GitHub in our local files.</p>
+
+    <h4>Pull Requests</h4>
+    <p>Pull requests notify people of commited changes that are ready to review.</p>
+    <p>It creates a discussion area so other team members can add comments and discuss the updates before it is merged to the main branch.</p>
+
+    <h4>Fork</h4>
+    <p>You can't add code to someone else's repository, but you can fork their repository and made a copy of it.</p>
+    <p>You can also make a copy of it on your local Git, by pasting the original repositories URL:</p>
+    <p>git clone <i>URL</i></p>
+
+
+    <p>REMEMBER: The main branch should always be deployable.</p>
+
+    <script src="index.js"></script>
+</body>
+
+</html>
