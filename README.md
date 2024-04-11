@@ -35,4 +35,8 @@ The following resources will also help with review of this topic:
 
 - [Git and GitHub](https://www.freecodecamp.org/news/introduction-to-git-and-github/)
 
+<<<<<<< HEAD
 - [Git tutorial](https://www.w3schools.com/git/)
+=======
+- [Git tutorial](https://www.w3schools.com/git/)
+>>>>>>> 29f961688f8c02963e6875ae9fa652ab238b613c
