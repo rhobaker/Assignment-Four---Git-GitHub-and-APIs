@@ -1,7 +1,12 @@
 # This repositiory contains revision notes for the Git and GitHub topics of the CFGDegree
 
+## <u>All about me</u>
+I am currently studying for the CFGDegree in the Spring cohort.\
+I have already completed projects in JavaScript, Pyhton and mySQL.\
+My current project is about Git and GitHub.
+
 ## <u>Project Description</u>
-The project is designed to provide a concise set of revision notes about Git and GitHub.\
+This project is designed to provide a concise set of revision notes about Git and GitHub.\
 It takes all the ***stress*** out of reviewing these topics in a easy to read set of notes.
 
 ## <u>Formats used</u>
