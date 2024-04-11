@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>The .gitignore file</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <h1>The .gitignore file</h1>
+    <p>The .gitignore file contains all of the files and folders that you want Git to ignore in the repository.</p>
+
+    <h2>How to create the file</h2>
+    <p>The file is created in a plain text file and has to be called .gitignore.txt.</p>
+    <p>It contains a list of all the files and folders that you want Git to ignore and not track in the repository.</p>
+    <p>Each additional file that you want to ignore should be on a new line.</p>
+    <p>The lines in the file can also use symbols to create matching patterns.</p>
+    <p>e.g. * is a wildcard match.</p>
+    <p># can be used to add comments to explain the lines in the file.</p>
+
+    <h2>Example lines:</h2>
+    <p># Ignore Mac system files</p>
+    <p>.DS_store</p>
+
+    <p># Ignore all text files</p>
+    <p>*.txt</p>
+
+
+    <h2>How to add .gitignore.txt</h2>
+    <p>The text file should be saved into the root directory of the Git folder.</p>
+    <p>To create the file, navigate to the root directory in the terminal and use the command:</p>
+    <p>touch .gitignore</p>
+    <p>You can then open the file \(remember it will be hidden\) and add a list of the files you want to ignore.</p>
+
+    <script src="index.js"></script>
+</body>
+
+</html>
