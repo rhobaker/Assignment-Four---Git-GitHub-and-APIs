@@ -1,2 +1,5 @@
 # ignore text.txt file in the root directory
 /text.txt
+
+# ignore DS_Store file in the root directory
+.DS_Store
