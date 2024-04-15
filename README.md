@@ -4,6 +4,7 @@
 I am currently studying for the CFGDegree in the Spring cohort.\
 I have already completed projects in JavaScript, Pyhton and mySQL.\
 My current project is about Git and GitHub.
+I am also working on one using APIs in Flask.
 
 ## <u>Project Description</u>
 This project is designed to provide a concise set of revision notes about Git and GitHub.\
@@ -35,8 +36,7 @@ The following resources will also help with review of this topic:
 
 - [Git and GitHub](https://www.freecodecamp.org/news/introduction-to-git-and-github/)
 
-<<<<<<< HEAD
 - [Git tutorial](https://www.w3schools.com/git/)
-=======
+
 - [Git tutorial](https://www.w3schools.com/git/)
->>>>>>> 29f961688f8c02963e6875ae9fa652ab238b613c
+
