@@ -1,84 +1,121 @@
-# This repositiory contains revision notes for the Git and GitHub topics of the CFGDegree
+# This document contains details on how to run the Dolphin Swim School API files
 
-## <u>All about me</u>
-I am currently studying for the CFGDegree in the Spring cohort.\
-I have already completed projects in JavaScript, Python and mySQL.\
-My current project is about Git and GitHub.
-I am also working on a project using APIs in Flask.
+## Introduction
 
-## <u>Project Description</u>
-This project is designed to provide a concise set of revision notes about Git and GitHub.\
-It takes all the ***stress*** out of reviewing these topics in a easy to read set of notes.
+The files in the repository are designed to mimic the API interaction between the customers and database of a swimming school.
+The school provides one to one lessons to help people learn to swim, and to improve their abilities.
 
-## <u>Formats used</u>
-The Markdown notes file is in the *markdown* format and can be viewed directly in GitHub, by clicking on the file.\
-The other files are in *HTML* format and can be viewed by opening them in a browser.
+The APIs allow customers to query information about available lessons and their own bookings in the database.
+They then also allow customers to interact with the database to open an account, book lessons, cancel lessons and send messages to the teachers.
 
-## <u>How to use the notes</u>
-The files are:
-```
-Git and GitHub notes
-Markdown notes
-README notes
-Requirements notes
-gitignore notes
-```
+The customer's computer (client) and the school's computer (server) communicate via APIs, which allow data to be transfered between them.
 
-The best order to use the notes in is to start with **"Git and GitHub notes"** and then move on to **"Markdown notes"** and finally the **"README notes."**  
+### How to edit the config file
 
-## <u>requirements and .gitignore</u>
-**Requirements explaination** and the **gitignore explaination** contain brief explainations as to what these files are and what they are used for.
+In order to work, the db_utils file needs to access mySQL on your local machine.\
+To do this it needs your mySQL username, password and host from the mySQL login screen.\
+Please update the variables below in the config file before running the other files.
 
-## <u>Demonstration of Git and GitHub</u>
-As part of my project, I have to demonstrate the use of Git and GitHub.\
-Screen shot links showing my use of both are detailed below, or can be accessed in the "Screen Shots" folder in the repository:
+HOST = "XXX"\
+USER = "XXX"\
+PASSWORD = "XXX"
 
-1. Initialising a repository:\
-[Initialising a repository in Git](/Screen%20shots/Git%20screen%20shots/1.%20Git%20init%20in%20local%20repository.png)
-2. Adding files to a staging area\
-[Adding files to the staging area in Git, before commiting them](/Screen%20shots/Git%20screen%20shots/2.%20Add%20files%20to%20staging%20area%20in%20local%20repository.png)
-3. Checking the status\
-[Checking the status of the local repository in Git](/Screen%20shots/Git%20screen%20shots/3.%20Check%20status%20of%20local%20repository.png)\
-[Checking the status of the remote repository in GitHub](/Screen%20shots/GitHub%20screen%20shots/14.%20Check%20master%20branch%20updated%20in%20GitHub.png)
-4. Creating a branch\
-[Creating a branch in Git](/Screen%20shots/Git%20screen%20shots/7.%20Create%20a%20branch%20in%20Git.png)\
-[Creating a branch in GitHub](/Screen%20shots/GitHub%20screen%20shots/2.%20Set%20up%20new%20branch%20in%20GitHub.png)\
-[Switching to a branch in GitHub](/Screen%20shots/GitHub%20screen%20shots/3.%20Switch%20new%20branch%20in%20GitHub.png)
-5. Adding files to a branch\
-[Adding files to a branch in Git](/Screen%20shots/Git%20screen%20shots/8.%20Commit%20to%20branch%20in%20Git.png)\
-[Checking differences between branches in Git](/Screen%20shots/Git%20screen%20shots/9.%20Check%20difference%20between%20branches%20in%20Git.png)\
-[Adding files to a branch in GitHub](/Screen%20shots/GitHub%20screen%20shots/6.%20Add%20a%20file%20to%20the%20new%20branch%20in%20GitHub.png)\
-[Show changes to a branch in GitHub](/Screen%20shots/GitHub%20screen%20shots/7.%20Show%20all%20changes%20made%20to%20new%20branch.png)
-6. Adding commits with meaningful messages\
-[Adding commits in Git](/Screen%20shots/Git%20screen%20shots/4.%20Commit%20changes%20to%20local%20repository.png)\
-[Adding commits in GitHub](/Screen%20shots/GitHub%20screen%20shots/5.%20Commit%20changes%20on%20new%20branch%20in%20GitHub.png)
-7. Linking Git and GitHub\
-[Creating a link to Github in Git](/Screen%20shots/Git%20screen%20shots/5.%20Create%20link%20to%20remote%20repository%20in%20Git.png)\
-[Push the master branch from the local repository to the remote repository](/Screen%20shots/Git%20screen%20shots/6.%20Push%20master%20branch%20to%20GitHub.png)
-8. Opening a pull request\
-[Opening a pull request in GitHub](/Screen%20shots/GitHub%20screen%20shots/8.%20Create%20a%20pull%20request%20in%20GitHub.png)\
-[A submitted pull request in GitHub](/Screen%20shots/GitHub%20screen%20shots/9.%20Submitted%20pull%20request%20in%20GitHub.png)
-9. Merging and deploying to the main branch\
-[Merging to main branch in Git](/Screen%20shots/Git%20screen%20shots/10.%20Merge%20branches%20together%20in%20Git.png)\
-[Merging to main branch in GitHub](/Screen%20shots/GitHub%20screen%20shots/10.%20Submit%20merge%20in%20GitHub.png)\
-[Completed merge in GitHub](/Screen%20shots/GitHub%20screen%20shots/11.%20Show%20merge%20successful%20in%20GitHub.png)
-10. Delete the branch after merging\
-[Delete branch in GitHub after merging branches](/Screen%20shots/GitHub%20screen%20shots/12.%20Delete%20a%20branch%20in%20GitHub.png)\
-[Check branch deleted in GitHub](/Screen%20shots/GitHub%20screen%20shots/13.%20Check%20branch%20deleted%20in%20GitHub.png)
+### Installation requirements
+
+The following packages need to be installed in your virtul environment before running the files:
+
+blinker==1.7.0\
+certifi==2024.2.2\
+charset-normalizer==3.3.2\
+click==8.1.7\
+distlib==0.3.8\
+filelock==3.13.4\
+Flask==3.0.3\
+idna==3.7\
+itsdangerous==2.1.2\
+Jinja2==3.1.3\
+MarkupSafe==2.1.5\
+mysql-connector-python==8.3.0\
+platformdirs==4.2.0\
+requests==2.31.0\
+simplejson==3.19.2\
+urllib3==2.2.1\
+virtualenv==20.25.1\
+Werkzeug==3.0.2
+
+### How to run the code
+
+1. Run the dolphin.sql file in mySQL to create the database that the Python files interact with.
+2. Set up a virtual environment with the packages listed above available within it via the terminal.
+3. Open the four files:\
+-config.py\
+-db_utils.py\
+-app.py\
+-main.py
+4. Ensure that all the modules have correctly been imported at the top of each file (except config).
+5. Run app.py to set up the server environment.
+6. Run main.py **in a separate terminal window**, to ensure that app.py is still running.
+7. Follow the instructions in the terminal window.
 
 
-## <u>Other resources to use</u>
-The following resources will also help with review of this topic:
+### What is supposed to happen when the file runs
 
-- [GitHub description of Readme](https://docs.github.com/en/repositories/managing-your-repositorys-settings-and-features/customizing-your-repository/about-readmes)
+When the main.py file loads there are four options that a user can select.
+The way these paths can be followed and the use of APIs in the interactions are outlined in the attached **FlowChart.png** file.
 
-- [Basic MarkDown Syntax](https://www.markdownguide.org/basic-syntax/)
+There are seven different interactions that use APIs to communicate between the client side (in main.py), via the server(in app.py), to the database (in db_utils.py). The way these seven interactions work are outlined individually below. Each line is prefaced with which side is involved, either client or server.
 
-- [Git Commands](https://www.freecodecamp.org/news/10-important-git-commands-that-every-developer-should-know/)
 
-- [Git and GitHub](https://www.freecodecamp.org/news/introduction-to-git-and-github/)
+#### One: Create a new customer
 
-- [Git tutorial](https://www.w3schools.com/git/)
+1. **CLIENT**: The customer types their first and second name into the interface. They are turned into JSON format and PUT on the URL ending **/new customer** as an API.
+2. **SERVER**: The @app.route decorator attached to the **add_new_customer** function listens for new customer API data being "PUT" onto the URL. The data is retrieved and passed to the **add_customer** function from the db_utils file, which creates the mySQL INSERT to insert the new customer in the database.\
+   *INSERT INTO customers (customer_first_name, customer_last_name) VALUES ("Alice",'"Flynn")*
+3. **CLIENT**: The programme checks that the update was succesful and prints a message to the customer.
 
-- [Git tutorial](https://www.w3schools.com/git/)
+#### Two: Return availiable lessons by time
 
+1. **CLIENT**: The customer types in the time they want to book a lesson, and the programme requests the available lessons for this time as an API from the **/booking** URL.
+2. **SERVER**: The @app.route decorator attached to the **get_time_bookings** function listens for a request for an API on the URL and runs the **get_all_availability_time** function from db_utils, which creates the mySQL query to get the information requested by the customer.    
+   *SELECT Date, Teacher FROM full_available_lesson_data WHERE Time = "11-12";*
+3. **SERVER**: The function appends all the records into a list and it is turned into JSON and put onto the URL as an API.
+4. **CLIENT**: The programme receives the API and the data is then processed so it can be read by the customer.
+
+#### Three: Return availiable lessons by date
+
+1. **CLIENT**: The customer types in the date they want to book the lesson and the programme requests the availalble lessons on this date as an API from the **/availiablility** URL.
+2. **SERVER**: The @app.route decorator attached to the **get_date_bookings** function listens for a request for an API on the URL. It then runs the **get_all_availability_date** function from db_utils, which creates the mySQL query to get the information requested by the customer.   
+   *SELECT Time, Teacher FROM full_available_lesson_data WHERE Date = "2024-05-01";*
+3. **SERVER**: The function appends all the records into a list and it is turned into JSON and put onto the URL as an API.
+4. **CLIENT**: The programme receives the API and the data is then processed so it can be read by the customer.
+
+#### Four: Book a lesson
+
+1. **CLIENT:** When the programme has the date and time of the new lesson it calls the **book_new_lesson** function. The function asks for the customer's first and last name and creates a JSON format of the data which is put on the **/lessonbooking** URL as an API.
+2. **SERVER** The @app.route decorator listens for an API "PUT" on this URL. It calls the **add_booking** function from db_utils, which creates the UPDATE statement in mySQL that will add the booking, after first getting the customer_id and the lesson_time_id.\
+    *UPDATE lessons SET customer_id = 4 WHERE lesson_date = "2024-05-01 AND lesson_time_id = 1*
+3. **CLIENT**: The programme checks that the update was succesful and prints a message to the customer.
+
+#### Five: Return current bookings
+
+1. **CLIENT**: The customer types their first and second name into the interface. This is turned into an API request for all current bookings on the URL ending **customer/{customer_first_name}/{customer_last_name}**.
+2. **SERVER**: The @app.route decorator attached to the **get_customer_bookings** function listens for the API request.  It then calls the **get_all_customer_bookings** function from db_utils file, which creates the query for the mySQL database.\
+   *SELECT Time, Teacher, Date FROM full_lesson_data WHERE FirstName = "Alice" AND LastName = "Flynn"*
+3. **SERVER**: The function appends all the records into a list and it is turned into JSON and put onto the URL as an API.
+4. **CLIENT**: The programme receives the API and the data is then processed so it can be read by the customer.
+
+#### Six: Cancel a booking
+
+1. **CLIENT**: The above steps in interaction five are performed, so the customer can see their currently booked lessons.
+2. **CLIENT**: The customer then enters the date and time of the lesson they want cancel. This is turned into JSON data and put on the **/deletelesson** URL as an API.
+3. **SERVER**: The @app.route decorator on the **cancel_lesson** function listens for the API being sent. The function **remove_booking** is called in db-utils, which creates the mySQL UPDATE to cancel the booking, after getting the id number of the time.\
+   *UPDATE lessons SET customer_id = NULL WHERE lesson_date = "2024-05-01" AND lesson_time_id = 2*
+4. **CLIENT**: The programme checks that the update was succesful and prints a message to the customer.
+
+#### Seven: Send a message
+
+1. **CLIENT**: The customer types in the teacher they want to message and the message they want to send.  This is turned into JSON format and put onto the URL **/message** as an API.
+2. **SERVER**: The @app.route decorator attached to the **message_to_teacher** function listens for the API.  It calls the **create_message** function in db_utils, which creates the INSERT statement for mySQL, after getting the teacher's id.\
+   *INSERT INTO messages (lesson_teacher_id, message) VALUES (1, "I am running late today - Alice")*
+3. **CLIENT**: The programme checks that the update was succesful and prints a message to the customer.
+        
