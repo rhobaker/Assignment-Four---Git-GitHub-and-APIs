@@ -24,7 +24,8 @@ To start a **new line**, put a \\ at the end of the line.\
 If this isn't done, there will not be a line break.
 
 To create a new **paragraph** of text, make sure there is a blank line between the blocks of text.\
-This is the first paragraph.
+
+E.g. This is the first paragraph.
 
 This is the second paragraph.
 
@@ -48,7 +49,7 @@ E.g. \[BBC news\]\(bbc.co.uk\news)\
 
 
 ### <u>Ordered Lists</u>
-To format a numbered list, then precede each entry with a number:
+To format a numbered list, precede each entry with a number:
 
 E.g.\
 \1. Paul\
@@ -65,7 +66,7 @@ E.g.\
 It will be automatically formatted with indents.
 
 ### <u>Unordered Lists</u>
-To make an unordered list, then precede each entry with a +, * or a -.
+To make an unordered list, precede each entry with a +, * or a -.
 
 E.g.\
 \- Mick\
