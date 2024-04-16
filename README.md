@@ -26,6 +26,21 @@ gitignore notes
 
 The best order to use the notes in is to start with **"Git and GitHub notes"** and then move on to **"Markdown notes"** and finally the **"README notes."**  The **Requirements notes** and the **gitignore notes** can be used as stand alone files.
 
+## <u>Demonstration of Git and GitHub</u>
+As part of my Git and GitHub project, I have to demonstrate the following items.\
+The screen shot links are detailed below:
+
+1. Checking the status\
+[Checking the status of a branch](/Screen%20shots/3.%20Check%20status.png)
+2. Creating a branch
+[Creating a branch in GitHub](/Screen%20shots/8.%20Create%20branch%20in%20GitHub.png)
+[Creating a branch in Git](/Screen%20shots/)
+
+3. Adding files to a branch
+4. Adding commits with meaningful messages
+5. Opening a pull request
+6. Merging and deploying to the main branch
+
 ## <u>Other resources to use</u>
 The following resources will also help with review of this topic:
 
