@@ -24,7 +24,10 @@ Requirements notes
 gitignore notes
 ```
 
-The best order to use the notes in is to start with **"Git and GitHub notes"** and then move on to **"Markdown notes"** and finally the **"README notes."**  The **Requirements notes** and the **gitignore notes** can be used as stand alone files.
+The best order to use the notes in is to start with **"Git and GitHub notes"** and then move on to **"Markdown notes"** and finally the **"README notes."**  
+
+## <u>requirements and .gitignore</u>
+**Requirements explaination** and the **gitignore explaination** contain brief explainations as to what these files are and what they are used for.
 
 ## <u>Demonstration of Git and GitHub</u>
 As part of my project, I have to demonstrate the use of Git and GitHub.\
