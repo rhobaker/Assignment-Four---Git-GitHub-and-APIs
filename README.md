@@ -2,7 +2,7 @@
 
 ## <u>All about me</u>
 I am currently studying for the CFGDegree in the Spring cohort.\
-I have already completed projects in JavaScript, Pyhton and mySQL.\
+I have already completed projects in JavaScript, Python and mySQL.\
 My current project is about Git and GitHub.
 I am also working on a project using APIs in Flask.
 
