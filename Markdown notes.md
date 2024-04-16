@@ -23,7 +23,7 @@ E.g. \# This is a heading!
 To start a **new line**, put a \\ at the end of the line.\
 If this isn't done, there will not be a line break.
 
-To create a new **paragraph** of text, make sure there is a blank line between the blocks of text.\
+To create a new **paragraph** of text, make sure there is a blank line between the blocks of text.
 
 E.g. This is the first paragraph.
 
