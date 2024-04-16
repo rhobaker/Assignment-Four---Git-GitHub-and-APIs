@@ -1,0 +1,3 @@
+HOST = "XXX"
+USER = "XXX"
+PASSWORD = "XXX"
